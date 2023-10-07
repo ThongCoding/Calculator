@@ -1,0 +1,162 @@
+/* ---------------------------------- General ---------------------------------- */
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+body{
+    font-family: sans-serif;
+    background-image: linear-gradient(to bottom right, #070ea3, #4bbfa6);;
+}
+
+
+/* ---------------------------------- Calculator ---------------------------------- */
+
+.container{
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+}
+
+.calculator{
+    position: relative;
+    border-radius: 20px;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    box-shadow: 0 0 30px #000000;
+}
+
+.theme-toggle-btn{
+    position: absolute;
+    right: 50%;
+    top: 30px;
+    z-index: 1;
+    cursor: pointer;
+    color: #b6bed6;
+}
+
+.theme-toggle-btn.active{
+    color: #333;
+}
+
+.theme-toggle-btn.active::before{
+    background-color: #b6bed6;
+}
+
+.theme-toggle-btn::before{
+    content: '';
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #333;
+    z-index: 1;
+}
+
+#display{
+    margin: 0 10px;
+    margin-bottom: 20px;
+    height: 100px;
+    width: auto;
+    max-width: 270px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: 30px;
+
+    overflow-x: scroll;
+}
+
+#display::-webkit-scrollbar{
+    height: 3px;
+    display: block;
+}
+
+button{
+    height: 60px;
+    width: 60px;
+    border: 0;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+/* ---------------------------------- Dark Mode ---------------------------------- */
+
+.calculator.dark-mode {
+    background-color: #071115;
+}
+
+.calculator.dark-mode #display {
+    color: #f8fafd;
+}
+
+.calculator.dark-mode button#clear {
+    background-color: #2d191e;
+    color: #bd3740;
+}
+
+.calculator.dark-mode button.btn-number {
+    background-color: #264227;
+    color: #f8fafb;
+}
+
+.calculator.dark-mode button.btn-operator {
+    background-color: #2a1147;
+    color: #aa00a4;
+}
+
+.calculator.dark-mode button.btn-equal {
+    background-color: #6b6a25;
+    color: #ffffff;
+}
+
+/* ---------------------------------- Light Mode ---------------------------------- */
+
+.calculator{
+    background-color: #b6bed6;
+}
+
+.calculator #display{
+    color: #0a1e23;
+}
+
+.calculator button#clear{
+    background-color: #ffd5d8;
+    color: #fc4552;
+}
+
+.calculator button.btn-number{
+    background-color: #81dbc6;
+    color: #000;
+}
+
+.calculator button.btn-operator{
+    background-color: #a46edb;
+    color: #f967f3;
+}
+
+.calculator button.btn-equal{
+    background-color: #e1e37b;
+    color: #000;
+}
+
+
